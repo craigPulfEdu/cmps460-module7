@@ -4,8 +4,8 @@
   "display": "standalone",
   "name": "craigpulfedu.github",
   "orientation": "any",
-  "scope": "/",
+  "scope": "/cmps460-module7/",
   "short_name": "craigpulfedu.github",
-  "start_url": "/index.html",
+  "start_url": "/cmps460-module7/index.html",
   "theme_color": "#ffffff"
 }
