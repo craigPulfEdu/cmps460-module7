@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox 720</title>
+<script>navigator.serviceWorker.register("pwa-app/service-worker.js")</script> 
+<link rel="manifest" href="pwa-app/manifest.json" />    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <h1>Xbox 720</h1>
+    </header>
+
+    <!-- navbar -->
+    <nav>
+        <a href="#main">Main</a>
+        <a href="#about">About</a>
+        <a href="#features">Games</a>
+        <a href="#pricing">Pricing</a>
+    </nav>
+
+    <section class="hero">
+        <h2>The Future of Gaming Has Arrived</h2>
+        <p>More power. More speed. More ridiculous features.</p>
+    </section>
+
+    <!-- popup box (purchase button) -->
+
+    <div id="popup" class="popup">
+        <div class="popup-box">
+            <h2 id="popup-title"></h2>
+            <p id="popup-text"></p>
+            <button id="closePopup" class="purchase">Close</button>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="container" id="main">
+        <section class="console">
+            <div class="image">
+                <img src="./images/xbox720.png" alt="Image of Xbox 720">
+            </div>
+
+            <div class="product-details">
+                <h2>Introducing the Xbox 720</h2>
+                <p>Releasing on <strong>December 31st</strong>, the Xbox 720 brings 10× the performance  of the Xbox Series X — and includes a built-in toe-washing module for maximum comfort.</p>
+                <ul>
+                    <li>10× More Processing Power</li>
+                    <li>Zero-Latency Cloud Gaming</li>
+                    <li>Exclusive Next-Gen Titles</li>
+                    <li>Toe Washing Attachment</li>
+                    <li>Legally Registered as an explosive</li>
+                    <li>Approved for Covert Millitant Operations</li>
+                </ul>
+
+                    <div class="popup-content">
+                        <p>This console is capable of blowing your socks off (literally).</p>
+                        <button id="purchase-xbox" class="purchase">Preorder this console</button>
+                    </div>
+
+            </div>
+            
+        </section>
+        <section class="console">
+            <div class="image">
+                <img src="./images/phone.png" alt="Image of Xbox 720">
+            </div>
+        
+            <div class="product-details">
+                <h2>Introducing the Gamer Phone 1080</h2>
+                <p>Releasing on <strong>March 15th</strong> The most powerful phone ever created in recorded human history!</p>
+        
+                <ul>
+                    <li>Most Elite Gamer Phone</li>
+                    <li>Play your games on the go</li>
+                    <li>Serves as an access pass in Microsoft Headquarters</li>
+                    <li>PETA Approved</li>
+                    <li>Goes great for long sessions</li>
+                </ul>
+
+                <div class="purchase-div">
+                    <p>With this you won't ever have a moment of boredom!</p>
+                    <button id="purchase-phone" class="purchase">Preorder this console</button>
+                </div>
+
+            </div>
+
+            
+        </section>
+
+        
+    </div>
+    
+    <footer><p>&copy; Xbox 720 — Totally Real Product - Infringements Punishable by Tickle (just send the cease and desist Microsoft)</p></footer>
+
+    <script>
+        const popup = document.getElementById("popup");
+        const popupTitle = document.getElementById("popup-title");
+        const popupText = document.getElementById("popup-text");
+        const closePopup = document.getElementById("closePopup");
+        
+        document.getElementById("purchase-xbox").addEventListener("click", () => {
+            popupTitle.textContent = "Xbox 720 Preorder";
+            popupText.textContent = "best console to preorder excellent choice mr professor";
+            popup.style.display = "flex";
+        });
+        
+        document.getElementById("purchase-phone").addEventListener("click", () => {
+            popupTitle.textContent = "Gamer Phone 1080 Preorder";
+            popupText.textContent = "ELITE GAMER PHONE BUY NOW";
+            popup.style.display = "flex";
+        });
+        
+        closePopup.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+        </script>
+        
+
+</body>
+</html>
